@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_20"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.blogDetails.ui.BlogDetails">
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/edit_Lay"
+                android:paddingTop="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/title_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="30dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/title_tv">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/title_edt"
+
+                        style="@style/my_EditText_style"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    app:layout_constraintTop_toBottomOf="@+id/title_lay"
+                    android:id="@+id/des_lay"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/description_tv">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/des_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/my_EditText_style"
+                        android:inputType="textMultiLine"
+                        android:maxLines="20"
+                        android:minLines="4"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:imeOptions="actionNext"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/businessBx"
+                    android:layout_marginTop="@dimen/space_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/business_chk"
+                    style="@style/my_EditText_style"
+                    app:layout_constraintEnd_toEndOf="@+id/des_lay"
+                    app:layout_constraintStart_toStartOf="@+id/des_lay"
+                    app:layout_constraintTop_toBottomOf="@+id/des_lay" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/lifestyleBx"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lifestyle_chk"
+                    style="@style/my_EditText_style"
+                    app:layout_constraintEnd_toEndOf="@+id/des_lay"
+                    app:layout_constraintStart_toStartOf="@+id/des_lay"
+                    app:layout_constraintTop_toBottomOf="@+id/businessBx" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/productivityBx"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/productivity_chk"
+                    style="@style/my_EditText_style"
+                    app:layout_constraintEnd_toEndOf="@+id/des_lay"
+                    app:layout_constraintStart_toStartOf="@+id/des_lay"
+                    app:layout_constraintTop_toBottomOf="@+id/lifestyleBx" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/entertainment_chkBx"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/entertainment_chk"
+                    style="@style/my_EditText_style"
+                    app:layout_constraintEnd_toEndOf="@+id/des_lay"
+                    app:layout_constraintStart_toStartOf="@+id/des_lay"
+                    app:layout_constraintTop_toBottomOf="@+id/productivityBx" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_marginTop="@dimen/space_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/update_blog"
+                android:textSize="@dimen/_18sdp"
+                android:backgroundTint="@color/teal_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_Lay">
+
+            </Button>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>

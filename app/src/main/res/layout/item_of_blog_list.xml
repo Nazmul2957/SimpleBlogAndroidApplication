@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="blog"
+            type="com.example.simpleblogandroidapplication.model.Blog" />
+    </data>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="@dimen/space_10"
+
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/md_white_1000"
+    app:cardCornerRadius="5dp"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+        <ImageView
+            android:loadImage="@{blog.coverPhoto}"
+            android:id="@+id/cover_photo"
+            android:layout_width="120dp"
+            android:padding="@dimen/space_8"
+            android:clickable="true"
+            android:src="@drawable/placeholder"
+            android:layout_height="180dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/titel_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            android:layout_marginTop="15dp"
+            android:maxLines="2"
+            android:minLines="1"
+            android:ellipsize="end"
+            android:text="@{blog.title}"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/space_8"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cover_photo"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/des_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_15"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:minLines="5"
+            android:text="@{blog.description}"
+            android:layout_marginRight="@dimen/space_8"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/titel_tv"
+            app:layout_constraintTop_toBottomOf="@+id/titel_tv">
+
+        </TextView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

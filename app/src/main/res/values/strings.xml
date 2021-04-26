@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Simple Blog Android Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_tv">Title</string>
+    <string name="description_tv">Description</string>
+    <string name="author_name_tv">Author</string>
+    <string name="category_tv">Category</string>
+    <string name="author_profession_tv">Profession</string>
+
+
+<!--button -->
+    <string name="add_blog">Add</string>
+    <string name="update_blog">Update</string>
+    <string name="Edit_blog">Edit</string>
+    <!--checkBox-->
+    <string name="business_chk">Business</string>
+    <string name="lifestyle_chk">Lifestyle</string>
+    <string name="productivity_chk">Productivity</string>
+    <string name="entertainment_chk">Entertainment</string>
+
+<!--Author-->
+    <string name="author_id">1</string>
+    <string name="author_name">John Doe</string>
+    <string name="author_avatar">https://i.pravatar.cc/250</string>
+    <string name="author_profession">Content Writer</string>
+
+
+</resources>

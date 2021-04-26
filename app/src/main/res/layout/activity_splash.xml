@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity.ui.SplashActivity">
+
+    <TextView
+        android:id="@+id/app_name_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="@dimen/_30sdp"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal">
+
+    </TextView>
+    <LinearLayout
+        android:layout_margin="@dimen/space_16"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/app_name_TV"
+        app:layout_constraintEnd_toEndOf="@id/app_name_TV"
+        app:layout_constraintTop_toBottomOf="@id/app_name_TV"
+        android:gravity="center"
+        >
+        <com.example.simpleblogandroidapplication.util.DotProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/space_8"
+            app:activeDot="@drawable/active_dot"
+            app:dotSize="@dimen/space_10"
+            app:inactiveDot="@drawable/inactive_dot"
+            app:jumpingSpeed="200"
+            app:spacing="@dimen/space_10"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
